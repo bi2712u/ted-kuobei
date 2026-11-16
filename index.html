@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#C45C2A">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="口碑 TED">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./app.css">
+  <title>口碑 TED 精選</title>
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <div>
+          <h1>口碑 TED 精選</h1>
+          <p class="sub">整個官方頻道熱門影片。標記只存在這台裝置，不會上傳。</p>
+        </div>
+        <span class="badge">樣品</span>
+      </div>
+      <input class="search" id="q" type="search" enterkeyhint="search" placeholder="搜標題、講者或主題" autocomplete="off" spellcheck="false">
+    </header>
+
+    <div class="controls">
+      <div class="label">排序</div>
+      <div class="chips" id="sorts" role="tablist" aria-label="排序"></div>
+      <div class="label">長度</div>
+      <div class="chips" id="durs" role="tablist" aria-label="長度篩選"></div>
+      <div class="label">主題</div>
+      <div class="chips scroll" id="topics" role="tablist" aria-label="主題篩選"></div>
+      <div class="label">其他</div>
+      <div class="chips" id="extras" role="tablist" aria-label="其他篩選"></div>
+    </div>
+
+    <div class="install" id="install"></div>
+    <div class="banner" id="banner"></div>
+    <div class="tools">
+      <button type="button" id="exportMarks">匯出想看／看過</button>
+      <label>匯入標記<input type="file" id="importFile" accept="application/json,.json" hidden></label>
+    </div>
+    <details class="top20" id="top20box">
+      <summary>TED 頻道觀看數前 20</summary>
+      <p class="top20-note" id="top20note"></p>
+      <ol id="top20"></ol>
+    </details>
+    <div class="stats" id="stats"></div>
+    <div class="hint" id="hint"></div>
+    <div class="list" id="list"><p class="loading">載入中…</p></div>
+    <div class="morewrap" id="morewrap"></div>
+    <p class="foot" id="foot"></p>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
